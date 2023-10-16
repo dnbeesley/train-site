@@ -1,0 +1,99 @@
+{
+  "lines": [
+    {
+      "endNode": { "x": 200, "y": 50 },
+      "motorControlId": 0,
+      "startNode": { "x": 800, "y": 50 }
+    },
+    {
+      "endNode": { "x": 50, "y": 300 },
+      "motorControlId": 0,
+      "startNode": { "x": 100, "y": 100 }
+    },
+    {
+      "endNode": { "x": 200, "y": 100 },
+      "motorControlId": 1,
+      "startNode": { "x": 350, "y": 250 }
+    },
+    {
+      "endNode": { "x": 550, "y": 300 },
+      "motorControlId": 1,
+      "startNode": { "x": 850, "y": 300 }
+    },
+    {
+      "endNode": { "x": 550, "y": 350 },
+      "motorControlId": 1,
+      "startNode": { "x": 850, "y": 350 }
+    },
+    {
+      "endNode": { "x": 100, "y": 500 },
+      "motorControlId": 0,
+      "startNode": { "x": 50, "y": 300 }
+    },
+    {
+      "endNode": { "x": 450, "y": 350 },
+      "motorControlId": 1,
+      "startNode": { "x": 800, "y": 500 }
+    },
+    {
+      "endNode": { "x": 950, "y": 300 },
+      "motorControlId": 0,
+      "startNode": { "x": 900, "y": 500 }
+    },
+    {
+      "endNode": { "x": 800, "y": 550 },
+      "motorControlId": 0,
+      "startNode": { "x": 200, "y": 550 }
+    },
+    {
+      "endNode": { "x": 900, "y": 100 },
+      "motorControlId": 0,
+      "startNode": { "x": 950, "y": 300 }
+    },
+    {
+      "endNode": { "x": 200, "y": 550 },
+      "motorControlId": 0,
+      "startNode": { "x": 100, "y": 500 }
+    },
+    {
+      "endNode": { "x": 800, "y": 50 },
+      "motorControlId": 0,
+      "startNode": { "x": 900, "y": 100 }
+    }
+  ],
+  "topics": {
+    "i2cSensorPrefix": "layout/i2c-agent/",
+    "motorControl": "layout/i2c-agent/input/41",
+    "pointsControl": "layout/i2c-agent/input/40"
+  },
+  "turnOuts": [
+    {
+      "commonNode": { "x": 100, "y": 100 },
+      "forwardPin": 0,
+      "forwardNode": { "x": 200, "y": 50 },
+      "turnOutPin": 1,
+      "turnOutNode": { "x": 200, "y": 100 }
+    },
+    {
+      "commonNode": { "x": 900, "y": 500 },
+      "forwardPin": 2,
+      "forwardNode": { "x": 800, "y": 550 },
+      "turnOutPin": 3,
+      "turnOutNode": { "x": 800, "y": 500 }
+    },
+    {
+      "commonNode": { "x": 350, "y": 250 },
+      "forwardPin": 4,
+      "forwardNode": { "x": 450, "y": 350 },
+      "turnOutPin": 5,
+      "turnOutNode": { "x": 450, "y": 300 }
+    },
+    {
+      "commonNode": { "x": 450, "y": 300 },
+      "forwardPin": 6,
+      "forwardNode": { "x": 550, "y": 350 },
+      "turnOutPin": 7,
+      "turnOutNode": { "x": 550, "y": 300 }
+    }
+  ]
+}
