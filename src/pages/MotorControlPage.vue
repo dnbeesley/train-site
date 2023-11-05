@@ -1,6 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <motor-control-component/>
+    <motor-control-component />
   </q-page>
 </template>
 
@@ -10,6 +10,6 @@ import MotorControlComponent from 'src/components/MotorControlComponent.vue';
 
 export default defineComponent({
   name: 'MotorControlPage',
-  components: { MotorControlComponent }
+  components: { MotorControlComponent },
 });
 </script>

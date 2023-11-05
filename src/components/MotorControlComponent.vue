@@ -130,8 +130,6 @@ export default defineComponent({
           if (lastSentValue.value) {
             lastSentValue.value[i] = speedInt;
           }
-          console.log('onSliderChange');
-          console.log(motorControlState.value);
           layoutService.updateMotorControlState();
         }
       },
@@ -141,8 +139,6 @@ export default defineComponent({
         if (lastSentValue.value) {
           lastSentValue.value[i] = speedInt;
         }
-        console.log('onSliderMouseUp');
-        console.log(motorControlState.value);
         layoutService.updateMotorControlState();
       },
     };

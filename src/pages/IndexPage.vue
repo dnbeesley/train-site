@@ -1,6 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <layout-component/>
+    <layout-component />
   </q-page>
 </template>
 
@@ -10,6 +10,6 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { LayoutComponent }
+  components: { LayoutComponent },
 });
 </script>

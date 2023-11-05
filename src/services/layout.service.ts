@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Notify } from 'quasar';
 import { Config } from 'src/models/config.models';
 import { MotorControlState } from 'src/models/motor-control.models';
 import { Ref } from 'vue';
@@ -44,6 +45,8 @@ export class LayoutService {
   public connect() {
     this.socket = new WebSocket(getWsUrl('/ws/mqtt'));
     this.socket.onmessage = this.onmessage.bind(this);
+    this.socket.onclose = this.onclose.bind(this);
+    this.socket.onerror = this.onerror.bind(this);
   }
 
   public updateMotorControlState() {
@@ -89,6 +92,40 @@ export class LayoutService {
         topic: this.config.value.topics.pointsControl,
       })
     );
+  }
+
+  private onclose(ev: CloseEvent) {
+    if (ev.code === 1005) {
+      return; // Closed on client side
+    }
+
+    Notify.create({
+      message: 'Websocket closed',
+      color: 'negative',
+      timeout: 0,
+      actions: [
+        {
+          label: 'Reload',
+          color: 'white',
+          handler: () => window.location.reload(),
+        },
+      ],
+    });
+  }
+
+  private onerror() {
+    Notify.create({
+      message: 'Error with websocket',
+      color: 'negative',
+      timeout: 0,
+      actions: [
+        {
+          label: 'Reload',
+          color: 'white',
+          handler: () => window.location.reload(),
+        },
+      ],
+    });
   }
 
   private onmessage(event: MessageEvent) {
