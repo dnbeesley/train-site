@@ -63,8 +63,8 @@
   ],
   "topics": {
     "i2cSensorPrefix": "layout/i2c-agent/",
-    "motorControl": "layout/i2c-agent/input/41",
-    "pointsControl": "layout/i2c-agent/input/40"
+    "motorControl": "layout/i2c-agent/output/41",
+    "pointsControl": "layout/i2c-agent/output/40"
   },
   "turnOuts": [
     {
