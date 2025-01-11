@@ -6,36 +6,18 @@
           {{ i }}
         </td>
         <td>
-          <input
-            type="range"
-            min="0"
-            max="255"
-            v-model="state.speed"
-            @changed="() => onSliderChange(state)"
-            @mouseup="() => onSliderMouseUp(state)"
-          />
+          <input type="range" min="0" max="255" v-model="state.speed" @change="() => onSliderChange(state)"
+            @mouseup="() => onSliderMouseUp(state)" />
         </td>
         <td>
-          <input
-            type="number"
-            min="0"
-            max="255"
-            v-model="state.speed"
-            @changed="() => onSliderMouseUp(state)"
-          />
+          <input type="number" min="0" max="255" v-model="state.speed" @change="() => onSliderMouseUp(state)" />
         </td>
         <td>
-          <q-icon
-            :name="
-              state.isReversed
-                ? motorControls[i].reverseIcon || motorControls[i].forwardIcon
-                : motorControls[i].forwardIcon
-            "
-            @click="() => onDirectionChanged(state)"
-            :class="
-              state.isReversed && !motorControls[i].reverseIcon ? 'flip' : ''
-            "
-          />
+          <q-icon :name="state.isReversed
+            ? motorControls[i].reverseIcon || motorControls[i].forwardIcon
+            : motorControls[i].forwardIcon
+            " @click="() => onDirectionChanged(state)" :class="state.isReversed && !motorControls[i].reverseIcon ? 'flip' : ''
+                " />
         </td>
       </tr>
     </tbody>
